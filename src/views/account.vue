@@ -55,9 +55,9 @@
         <div class="card-header">
           Интересы
         </div>
-        <div class="card-body">
+        <div class="card-body cardFlex">
           <div style="text-align:center;">
-            <img src="../assets/DonutChart.svg" alt="">
+            <img src="../assets/DonutChart.svg" alt="" style="margin-bottom: 2rem">
             <h5>Информация заполнена на 70%</h5>
             <p>Расскажите нам о себе, чтобы мы могли подобрать вам идеальный тур</p>
             <button type="button" class="btn btn-primary">Дополнить информацию</button>
@@ -82,9 +82,8 @@
               <p>Позвонить в поддержку</p>
             </div>
             <div class="col-7 LogoBeta">
-              <img src="../assets/Vector.svg" alt="">
-              <img src="../assets/DT TOUR.svg" alt="">
-              <!-- <img src="../assets/Beta 0.0.1.svg" alt=""> -->
+              <img src="../assets/111.svg" alt="">
+
             </div>
           </div>
         </div>
@@ -116,5 +115,11 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.cardFlex{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
 }
 </style>

@@ -3,8 +3,8 @@
     <div сlass="popup">
 
       <div class="popupSwitcher" style="background: #ffffff; border-radius: 15px 15px 0 0;">
-        <button type="button" style="font-size: 25px; text-decoration: none; margin-bottom: 2rem;" class="btn btn-link mx-2">Карта</button>
-        <button type="button" style="font-size: 25px; text-decoration: none; margin-bottom: 2rem;" class="btn btn-link mx-2" @click="isListVisible">Список</button>
+        <button type="button" style="font-size: 25px; text-decoration: none; margin-bottom: 2rem; color:#283E59" class="btn btn-link mx-2">Карта</button>
+        <button type="button" style="font-size: 25px; text-decoration: none; margin-bottom: 2rem; color:#283E59" class="btn btn-link mx-2" @click="isListVisible">Список</button>
       </div>
 
       <div class="card cardPopup">
@@ -22,7 +22,7 @@
             <input type="text" class="form-control" placeholder="Выбрать на карте">
           </div>
           <div style="text-align: center;">
-            <button type="button" style="background-color: #283E59" class="btn btn-primary">Сохранить</button>
+            <button type="button" style="background-color: #283E59" class="btn btn-primary" @click="isClosePopup">Сохранить</button>
           </div>
         </div>
         <div>
