@@ -32,7 +32,7 @@
               <router-link to="/CustomizationPage"><button type="button" class="btn btn-link">Отменить</button></router-link>
               </div>
               <div class="col" style="text-align: right;">
-                <router-link to="/account"><button type="button" class="btn btn-primary">Сохранить</button></router-link>
+                <router-link to="/"><button type="button" class="btn btn-primary">Сохранить</button></router-link>
               </div>
             </div>
         </div>
