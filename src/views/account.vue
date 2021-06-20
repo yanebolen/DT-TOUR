@@ -19,7 +19,7 @@
                 Турист
               </div>
             </div>
-
+            <hr>
             <div class="row" style="margin-top: 1rem">
               <div class="col">
                 <b>Валюта</b>
@@ -28,7 +28,7 @@
                 RUB
               </div>
             </div>
-
+            <hr>
             <div class="row" style="margin-top: 1rem">
               <div class="col">
                 <b>Язык</b>

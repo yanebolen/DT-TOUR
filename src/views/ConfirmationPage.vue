@@ -2,22 +2,24 @@
   <div class="ConfirmationPage">
     <div class="fr1">
       <div class="card" style="height: 50rem">
-        <img src="../assets/edit-file 1.svg" style="margin-top: 2rem" alt="DT TOUR">
+        <div style="text-align:center">
+         <img src="../assets/edit-file 1.svg" style="margin-top: 2rem; height: 70px; width: 70px" alt="DT TOUR">
+       </div>
         <h1 style="text-align: center; margin-top: 2rem; margin-bottom: 2rem; font-size: 50px">Проверим данные</h1>
         <div style="margin-right: 8rem; margin-left: 8rem;">
 
           <div class="vertical-scroll-wrapper squares" v-if="CART_LIST.length" >
             <div class="card mb-2" v-for="tour in 1" :key="tour.id">
-              <h4>День {{tour}}</h4>
+              <h4 class="mx-2 my-2">День {{tour}}</h4>
 
                 <div v-for="cartList in CART_LIST" :key="cartList.day">
-                  <div class="card mx-5 my-2">
+                  <div class="card mx-5 my-2" style="border-radius:15px">
                     <div class="row" style="height: 45px;">
                       <div class="col mx-3">
-                        <p class="mt-2">{{cartList.name}}</p>
+                        <h6 class="mt-2 mx-2">{{cartList.name}}</h6>
                       </div>
                       <div class="col mx-3" style="text-align: right;">
-                        <p class="mt-2">{{cartList.time}}</p>
+                        <p class="mt-2 mx-2" style="color:#95AAC9">{{cartList.time}}</p>
                       </div>
                     </div>
                   </div>
@@ -27,10 +29,10 @@
 
             <div class="row">
               <div class="col">
-              <router-link to="/CustomizationPage"><button type="button" class="btn btn-link">Отменить</button></router-link> 
+              <router-link to="/CustomizationPage"><button type="button" class="btn btn-link">Отменить</button></router-link>
               </div>
               <div class="col" style="text-align: right;">
-                <button type="button" class="btn btn-primary">Сохранить</button>
+                <router-link to="/account"><button type="button" class="btn btn-primary">Сохранить</button></router-link>
               </div>
             </div>
         </div>

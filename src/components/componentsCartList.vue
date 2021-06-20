@@ -1,12 +1,12 @@
 <template id="">
 
-      <div class="card mx-5 my-2">
+      <div class="card mx-5 my-2" style="border-radius:15px">
         <div class="row" style="height: 45px;">
           <div class="col mx-3">
-            <p class="mt-2">{{cartList_data.name}}</p>
+            <h6 class="mt-2 mx-2">{{cartList_data.name}}</h6>
           </div>
           <div class="col mx-3" style="text-align: right;">
-            <p class="mt-2">{{cartList_data.time}}</p>
+            <p class="mt-2 mx-2" style="color:#95AAC9">{{cartList_data.time}}</p>
           </div>
         </div>
       </div>

@@ -2,16 +2,18 @@
   <div class="CustomizationPage">
     <div class="fr1">
       <div class="card" style="height: 50rem">
-        <img src="../assets/edit-file 1.svg" style="margin-top: 2rem" alt="DT TOUR">
+        <div style="text-align:center">
+         <img src="../assets/edit-file 1.svg" style="margin-top: 2rem; height: 70px; width: 70px" alt="DT TOUR">
+       </div>
         <h1 style="text-align: center; margin-top: 2rem; margin-bottom: 2rem; font-size: 50px">Что хотим посетить?</h1>
         <div style="margin-right: 8rem; margin-left: 8rem;">
 
           <div class="vertical-scroll-wrapper squares">
             <div class="card mb-2" v-for="day in 1" :key="day.id">
-              <h4>День {{day}}</h4>
-
-                  <componentsCartList :cartList_data="cartList" v-if="CART_LIST.length" v-for="cartList in CART_LIST" :key="cartList.day"></componentsCartList>
-
+              <h4 class="mx-2 my-2">День {{day}}</h4>
+                <div v-if="CART_LIST.length">
+                   <componentsCartList :cartList_data="cartList" v-for="cartList in CART_LIST" :key="cartList.day"></componentsCartList>
+                </div>
                 <div class="mx-5 my-2">
                   <button type="button" class="btnOpenPopup btn btn-link" @click="btnOpenPopup">+ Добавить</button>
                 </div>

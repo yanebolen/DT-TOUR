@@ -2,9 +2,9 @@
   <div class="popupWrapper">
     <div сlass="popup">
 
-      <div class="popupSwitcher">
-        <button type="button" style="font-size: 25px; text-decoration: none; margin-bottom: 2rem" class="btn btn-link mx-2">Карта</button>
-        <button type="button" style="font-size: 25px; text-decoration: none; margin-bottom: 2rem" class="btn btn-link mx-2" @click="isListVisible">Список</button>
+      <div class="popupSwitcher" style="background: #ffffff; border-radius: 15px 15px 0 0;">
+        <button type="button" style="font-size: 25px; text-decoration: none; margin-bottom: 2rem;" class="btn btn-link mx-2">Карта</button>
+        <button type="button" style="font-size: 25px; text-decoration: none; margin-bottom: 2rem;" class="btn btn-link mx-2" @click="isListVisible">Список</button>
       </div>
 
       <div class="card cardPopup">
@@ -24,6 +24,9 @@
           <div style="text-align: center;">
             <button type="button" style="background-color: #283E59" class="btn btn-primary">Сохранить</button>
           </div>
+        </div>
+        <div>
+          <iframe style="height: 100%; width:100%" src="https://yandex.ru/map-widget/v1/?um=constructor%3A9befa2af87a1846ff2065b8f238eb1ba96ee9b9ad9333bf979e0476624260ccb&amp;source=constructor" width="464" height="398" frameborder="0"></iframe>
         </div>
       </div>
 

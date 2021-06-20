@@ -2,7 +2,9 @@
   <div class="PlanningPage">
     <div class="fr1">
         <div class="card" style="height: 50rem">
-          <img src="../assets/edit-file 1.svg" style="margin-top: 2rem" alt="DT TOUR">
+          <div style="text-align:center">
+           <img src="../assets/edit-file 1.svg" style="margin-top: 2rem; height: 70px; width: 70px" alt="DT TOUR">
+         </div>
           <h1 style="text-align: center; margin-top: 2rem; margin-bottom: 5rem; font-size: 50px">Настроим путешествие</h1>
           <div style="margin-right: 8rem; margin-left: 8rem;">
               <h4 style="margin-bottom: 2rem">Название вашего путешествия</h4>
