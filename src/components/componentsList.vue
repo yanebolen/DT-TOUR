@@ -21,8 +21,12 @@
       </div>
 
       <div style="margin-right: 5rem; margin-left: 5rem; margin-top: 3rem;">
-        <componentsListRec v-if="isComponentsListRec" :tour_data="tour" v-for="tour in TOURS_REC" :key="tour.day" @addToCartRec="addToCartRec"></componentsListRec>
-        <componentsListView v-if="!isComponentsListRec" :tourView_data="tourView" v-for="tourView in TOURS_VIEW" :key="tourView.day"></componentsListView>
+        <div v-if="isComponentsListRec">
+          <componentsListRec :tour_data="tour" v-for="tour in TOURS_REC" :key="tour.day" @addToCartRec="addToCartRec"></componentsListRec>
+        </div>
+        <div v-if="!isComponentsListRec">
+          <componentsListView  :tourView_data="tourView" v-for="tourView in TOURS_VIEW" :key="tourView.day"></componentsListView>
+        </div>
       </div>
 
     </div>
