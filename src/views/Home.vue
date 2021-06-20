@@ -4,8 +4,8 @@
       <div class="card" style="border-radius: 15px; margin-bottom: 1rem">
         <div class="row">
           <div class="col">
-            <h4 class="mx-2 my-2" style="color:#3B516C">{{tour.name}}</h4>
-            <h6 class="mx-2 my-2" style="color:#3B516C">{{tour.street}}</h6>
+            <h4 class="mx-4 my-4" style="color:#3B516C">{{tour.name}}</h4>
+            <h6 class="mx-4 my-4" style="color:#3B516C">{{tour.street}}</h6>
           </div>
           <div class="col" style="text-align: right">
             <button type="button" class="btn btn-link">Подробнее</button>
@@ -33,7 +33,7 @@ export default {
 
 <style>
 .myTours{
-  margin-left: 40rem;
-  margin-right: 40rem;
+  margin-left: 30rem;
+  margin-right: 30rem;
 }
 </style>
