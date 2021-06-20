@@ -11,8 +11,8 @@
     </div> -->
     <div style="margin-bottom: 1rem">
           <div class="inBlock" style="padding-top: 1rem">
-            <div>
-              <img src="./assets/Logo.svg" style="margin-left: 3rem; margin-bottom: 3rem" alt="DT TOUR">
+            <div class="inBlockLogo">
+              <img src="./assets/Logo.svg" style="margin-left: 3rem; margin-bottom: 3rem; margin-top: 2rem" alt="DT TOUR">
             </div>
             <div>
               <router-link to="/PlanningPage"><button type="button" class="btn btn-link" style="text-decoration: none; color:#283E59; margin-left: 3rem"><h3>Мои туры</h3></button></router-link>
@@ -43,5 +43,10 @@ html, body {
 }
 .inBlock div{
   display:inline-block;
+}
+.inBlockLogo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 </style>
