@@ -9,8 +9,8 @@
       <router-link to="/account">account</router-link>
       <router-link to="/AllTours">AllTours</router-link>
     </div> -->
-    <div style="margin-bottom: 1rem">
-          <div class="inBlock" style="padding-top: 1rem">
+    <div style="">
+          <div class="inBlock">
             <div class="inBlockLogo">
               <img src="./assets/Logo.svg" style="margin-left: 3rem; margin-bottom: 3rem; margin-top: 2rem" alt="DT TOUR">
             </div>
@@ -43,10 +43,5 @@ html, body {
 }
 .inBlock div{
   display:inline-block;
-}
-.inBlockLogo{
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 </style>
