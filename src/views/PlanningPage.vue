@@ -34,12 +34,12 @@
                   </div>
                 </div>
               </div>
-              <div class="row">
+              <div class="row" style="margin-top: 10rem">
                 <div class="col">
                   <button type="button" class="btn btn-link">Отменить</button>
                 </div>
                 <div class="col" style="text-align: right;">
-                  <button type="button" class="btn btn-primary">Следующий шаг</button>
+                  <router-link to="/CustomizationPage"><button type="button" class="btn btn-primary">Следующий шаг</button></router-link>
                 </div>
               </div>
           </div>

@@ -11,6 +11,9 @@
     </div>
     <div style="margin-top: 1rem">
           <img src="./assets/Logo.svg" style="margin-left: 3rem; margin-bottom: 3rem" alt="DT TOUR">
+          <router-link to="/PlanningPage"><button type="button" class="btn btn-link" style="text-decoration: none; color:#283E59; margin-left: 3rem"><h3>Мои туры</h3></button></router-link>
+          <button type="button" class="btn btn-link" style="text-decoration: none; color:#283E59"><h3>Готовые туры</h3></button>
+          <router-link to="/account"><button type="button" class="btn btn-link" style="text-decoration: none; color:#283E59"><h3>Аккаунт</h3></button></router-link>
     </div>
     <router-view/>
   </div>

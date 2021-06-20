@@ -5,29 +5,54 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    tours: [
+    toursRec: [
      {
-       image: "https://cdn.eapteka.ru/upload/offer_photo/506/595/resized/230_230_1_4e2ef13a598501cc12ce986daa699d62.jpeg?_cvc=1622209430",
-       name: 'Поездка на фишт',
+       image:"https://anapacity.com/images/articles/big/gora-fisht.jpg",
+       name:'Поездка на фишт',
        time:'12:55',
+       spec:'Рекомендуем',
+       street: 'Леселидзе 125а',
        day:'1',
      },
      {
-       image: "https://cdn.eapteka.ru/upload/offer_photo/326/704/resized/230_230_1_9f65988def262d75e21c8c0c8adfcff7.jpeg?_cvc=1622209430",
-       name: 'Разбиваем лагерь',
+       image:"https://prokat.pw/wp-content/uploads/2018/11/45758543.jpg",
+       name:'Имеретинский курорт',
        time:'15:45',
+       spec:'Подойдёт именно вам',
+       street: 'Войкова 1',
        day:'2',
      },
    ],
+   toursView: [
+    {
+      image:"https://img.tourister.ru/files/2/0/9/6/6/3/2/2/clones/870_489_fixedwidth.jpg?t=1624141264287",
+      name:'Волконский дольмен',
+      time:'12:55',
+      spec:'Рекомендуем',
+      day:'1',
+    },
+  ],
+  cartList: [],
   },
   mutations: {
+    SET_CART: (state, tour) => {
+      state.cartList.push(tour)
+    }
   },
   actions: {
-
+    ADD_TO_CART({commit}, tour) {
+      commit('SET_CART', tour);
+    }
   },
   getters: {
-    TOURS(state){
-      return state.tours;
+    TOURS_REC(state){
+      return state.toursRec;
+    },
+    TOURS_VIEW(state){
+      return state.toursView;
+    },
+    CART_LIST(state){
+      return state.cartList;
     }
   }
 })

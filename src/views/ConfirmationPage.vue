@@ -6,26 +6,28 @@
         <h1 style="text-align: center; margin-top: 2rem; margin-bottom: 2rem; font-size: 50px">Проверим данные</h1>
         <div style="margin-right: 8rem; margin-left: 8rem;">
 
-          <div class="vertical-scroll-wrapper squares">
-            <div class="card mb-2" v-for="tour in TOURS" :key="tour.day">
-              <h4>День {{tour.day}}</h4>
+          <div class="vertical-scroll-wrapper squares" v-if="CART_LIST.length" >
+            <div class="card mb-2" v-for="tour in 1" :key="tour.id">
+              <h4>День {{tour}}</h4>
 
+                <div v-for="cartList in CART_LIST" :key="cartList.day">
                   <div class="card mx-5 my-2">
                     <div class="row" style="height: 45px;">
                       <div class="col mx-3">
-                        <p class="mt-2">{{tour.name}}</p>
+                        <p class="mt-2">{{cartList.name}}</p>
                       </div>
                       <div class="col mx-3" style="text-align: right;">
-                        <p class="mt-2">{{tour.time}}</p>
+                        <p class="mt-2">{{cartList.time}}</p>
                       </div>
                     </div>
                   </div>
+                </div>
             </div>
           </div>
 
             <div class="row">
               <div class="col">
-                <button type="button" class="btn btn-link">Отменить</button>
+              <router-link to="/CustomizationPage"><button type="button" class="btn btn-link">Отменить</button></router-link> 
               </div>
               <div class="col" style="text-align: right;">
                 <button type="button" class="btn btn-primary">Сохранить</button>
@@ -56,7 +58,7 @@ export default {
   },
   computed: {
     ...mapGetters([
-      'TOURS'
+      'CART_LIST'
     ]),
   },
   methods: {

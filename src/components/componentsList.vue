@@ -1,30 +1,73 @@
 <template id="">
   <div class="listWrapper">
-    <div class="popupListSwitcher">
-      <button type="button" style="font-size: 25px; text-decoration: none; margin-bottom: 2rem" class="btn btn-link mx-2" @click="isCloseList">Карта</button>
-      <button type="button" style="font-size: 25px; text-decoration: none; margin-bottom: 2rem" class="btn btn-link mx-2">Список</button>
-    </div>
     <div class="card cardList">
-      <h1>cardList</h1>
+      <div class="row" style="margin-right: 2rem; margin-left: 2rem; margin-top: 2rem">
+        <div class="col-2">
+          <button type="button" style=" color: #ffffff; font-size: 20px; text-decoration: none;" class="btn btn-link" @click="isCloseList">Назад</button>
+        </div>
+        <div class="col-10">
+          <div class="input-group" style="height: 41px;">
+            <input type="text" class="form-control" style="" placeholder="Поиск">
+          </div>
+        </div>
+      </div>
+      <div class="btnGroupOnList" style="display:inline-block">
+        <button type="button" style="background-color: #283E59; border-radius: 30px; font-size: 23px" class="btn btn-primary mx-2" @click="openRec">  Погулять  </button>
+        <button type="button" style="background-color: #283E59; border-radius: 30px; font-size: 23px" class="btn btn-primary mx-2" @click="openView">  Посмотреть  </button>
+        <button type="button" style="background-color: #E3EBF6; color:#95AAC9 ;border-radius: 30px; font-size: 23px" class="btn btn-primary mx-2">  Поесть  </button>
+        <button type="button" style="background-color: #E3EBF6; color:#95AAC9 ;border-radius: 30px; font-size: 23px" class="btn btn-primary mx-2">  Шопинг  </button>
+        <button type="button" style="background-color: #E3EBF6; color:#95AAC9 ;border-radius: 30px; font-size: 23px" class="btn btn-primary mx-2">  Развлечения  </button>
+        <button type="button" style="background-color: #E3EBF6; color:#95AAC9 ;border-radius: 30px; font-size: 23px" class="btn btn-primary mx-2">  Афиша  </button>
+      </div>
+
+      <div style="margin-right: 5rem; margin-left: 5rem; margin-top: 3rem;">
+        <componentsListRec v-if="isComponentsListRec" :tour_data="tour" v-for="tour in TOURS_REC" :key="tour.day" @addToCartRec="addToCartRec"></componentsListRec>
+        <componentsListView v-if="!isComponentsListRec" :tourView_data="tourView" v-for="tourView in TOURS_VIEW" :key="tourView.day"></componentsListView>
+      </div>
+
     </div>
   </div>
 </template>
 <script>
+import componentsListRec from './componentsListRec'
+import componentsListView from './componentsListView'
+import {mapGetters, mapActions} from 'vuex'
+
 export default {
   name: "componentsList",
 
   components: {
+    componentsListRec,
+    componentsListView
   },
   data(){
     return{
-
+      isComponentsListRec: true,
     }
   },
+  computed: {
+    ...mapGetters([
+      'TOURS_REC',
+      'TOURS_VIEW'
+    ]),
+  },
   methods: {
+    ...mapActions([
+      'ADD_TO_CART'
+    ]),
     isCloseList(){
       this.$emit('isCloseList')
       this.isComponentsList = false;
     },
+    openRec(){
+      this.isComponentsListRec = true;
+    },
+    openView(){
+      this.isComponentsListRec = false;
+    },
+    addToCartRec(data){
+      this.ADD_TO_CART(data)
+    }
   }
 }
 </script>
@@ -43,11 +86,10 @@ export default {
   height: 51rem;
   width: 80rem;
   margin-top: 5rem;
+  background: #2C7BE5;
 }
-.popupListSwitcher{
-  display: flex;
-  position: absolute;
-  justify-content: center;
-  align-items: center;
+.btnGroupOnList{
+  text-align: center;
+  margin-top: 2rem;
 }
 </style>

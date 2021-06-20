@@ -7,19 +7,11 @@
         <div style="margin-right: 8rem; margin-left: 8rem;">
 
           <div class="vertical-scroll-wrapper squares">
-            <div class="card mb-2" v-for="day in 2" :key="day.id">
+            <div class="card mb-2" v-for="day in 1" :key="day.id">
               <h4>День {{day}}</h4>
 
-                  <div class="card mx-5 my-2">
-                    <div class="row" style="height: 45px;">
-                      <div class="col mx-3">
-                        <p class="mt-2">Посетить морской вокзал</p>
-                      </div>
-                      <div class="col mx-3" style="text-align: right;">
-                        <p class="mt-2">12:55</p>
-                      </div>
-                    </div>
-                  </div>
+                  <componentsCartList :cartList_data="cartList" v-if="CART_LIST.length" v-for="cartList in CART_LIST" :key="cartList.day"></componentsCartList>
+
                 <div class="mx-5 my-2">
                   <button type="button" class="btnOpenPopup btn btn-link" @click="btnOpenPopup">+ Добавить</button>
                 </div>
@@ -28,10 +20,10 @@
 
             <div class="row">
               <div class="col">
-                <button type="button" class="btn btn-link">Отменить</button>
+                <router-link to="/PlanningPage"><button type="button" class="btn btn-link">Отменить</button></router-link>
               </div>
               <div class="col" style="text-align: right;">
-                <button type="button" class="btn btn-primary">Следующий шаг</button>
+                <router-link to="/ConfirmationPage"><button type="button" class="btn btn-primary">Следующий шаг</button></router-link>
               </div>
             </div>
         </div>
@@ -49,17 +41,25 @@
 <script>
 import componentsSettings from '../components/componentsSettings'
 import componentsPopup from '../components/componentsPopup'
+import componentsCartList from '../components/componentsCartList'
+import {mapGetters} from 'vuex'
 
 export default {
   name: 'CustomizationPage',
   components: {
     componentsSettings,
-    componentsPopup
+    componentsPopup,
+    componentsCartList
   },
   data(){
     return{
       isPopupVisible: false,
     }
+  },
+  computed: {
+    ...mapGetters([
+      'CART_LIST'
+    ]),
   },
   methods: {
     btnOpenPopup() {
