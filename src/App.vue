@@ -9,11 +9,21 @@
       <router-link to="/account">account</router-link>
       <router-link to="/AllTours">AllTours</router-link>
     </div> -->
-    <div style="margin-bottom: 1rem" class="">
-          <img src="./assets/Logo.svg" style="margin-left: 3rem; margin-bottom: 3rem" alt="DT TOUR">
-          <router-link to="/PlanningPage"><button type="button" class="btn btn-link" style="text-decoration: none; color:#283E59; margin-left: 3rem"><h3>Мои туры</h3></button></router-link>
-          <button type="button" class="btn btn-link" style="text-decoration: none; color:#283E59"><h3>Готовые туры</h3></button>
-          <router-link to="/account"><button type="button" class="btn btn-link" style="text-decoration: none; color:#283E59"><h3>Аккаунт</h3></button></router-link>
+    <div style="margin-bottom: 1rem">
+          <div class="inBlock" style="padding-top: 1rem">
+            <div>
+              <img src="./assets/Logo.svg" style="margin-left: 3rem; margin-bottom: 3rem" alt="DT TOUR">
+            </div>
+            <div>
+              <router-link to="/PlanningPage"><button type="button" class="btn btn-link" style="text-decoration: none; color:#283E59; margin-left: 3rem"><h3>Мои туры</h3></button></router-link>
+            </div>
+            <div>
+              <button type="button" class="btn btn-link" style="text-decoration: none; color:#283E59"><h3>Готовые туры</h3></button>
+            </div>
+            <div>
+              <router-link to="/account"><button type="button" class="btn btn-link" style="text-decoration: none; color:#283E59"><h3>Аккаунт</h3></button></router-link>
+            </div>
+        </div>
     </div>
     <router-view/>
   </div>
@@ -30,5 +40,8 @@ html, body {
   margin: 0;
   padding: 0;
   overflow: hidden;
+}
+.inBlock div{
+  display:inline-block;
 }
 </style>
